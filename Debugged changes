@@ -1,0 +1,9 @@
+Analyze this HTML/CSS snippet for layout and code issues. 
+Fix all bugs including typos, broken tags, invalid CSS, and improve consistency.
+
+Next:
+1. Refactor the snippet into a reusable JavaScript component Card(title, price, features).
+2. Ensure clean styling, valid structure, and reusable classes.
+3. Output two blocks: "Before code" and "After code".
+4. Use semantic HTML and accessible buttons.
+5. Make the CSS modern and clean.
