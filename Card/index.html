@@ -1,24 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css"/>
-</head>
-<body>
-    <div class="pricing">
+<html>
+  <head>
+    <style>
+      .card {
+        width: 300px;
+        margin: 20px auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: left;
+        font-family: Arial, sans-serif;
+      }
 
-<h2 class="title">Basic Plan<h2>
+      .card-title {
+        font-size: 22px;
+        font-weight: bold;
+      }
 
-<p class="price">$9.99 /month</p>
-<ul class="features">
-<li>1 GB Storage</li>
-<li>Basic Support</li>
-<li>All Core Features</li>
-</ul>
-<button class="btn">Start Trial</button>
-</div>
-</body>
+      .card-price {
+        font-size: 18px;
+        color: green;
+        margin-bottom: 10px;
+      }
+
+      .card-features {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      .card-features li {
+        padding: 6px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .card-btn {
+        background: blue;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        margin-top: 15px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+      .card-btn:hover {
+        background: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script>
+      // Reusable card component
+      function Card(title, price, features) {
+        return `
+    <div class="card">
+      <h2 class="card-title">${title}</h2>
+      <p class="card-price">${price}</p>
+      <ul class="card-features">
+        ${features.map((f) => `<li>${f}</li>`).join("")}
+      </ul>
+      <button class="card-btn">Start Trial</button>
+    </div>
+  `;
+      }
+
+      // Render example usage
+      document.getElementById("app").innerHTML = Card(
+        "Basic Plan",
+        "$9.99 / month",
+        ["1 GB Storage", "Basic Support", "All Core Features"]
+      );
+    </script>
+  </body>
 </html>
-
