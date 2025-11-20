@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Candy Store Theme - Cotton Candy Colors */
+    --background: 300 45% 98%;
+    --foreground: 330 70% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 330 70% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 330 70% 25%;
+
+    /* Cotton Candy Pink */
+    --primary: 330 85% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Sky Blue */
+    --secondary: 200 85% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 300 35% 95%;
+    --muted-foreground: 330 30% 45%;
+
+    --accent: 280 75% 70%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 300 30% 90%;
+    --input: 300 30% 90%;
+    --ring: 330 85% 65%;
+
+    --radius: 1rem;
+
+    /* Candy gradients */
+    --gradient-candy: linear-gradient(
+      135deg,
+      hsl(330 85% 65%),
+      hsl(200 85% 65%)
+    );
+    --gradient-hero: linear-gradient(
+      180deg,
+      hsl(300 45% 98%),
+      hsl(200 50% 95%)
+    );
+
+    /* Sidebar colors */
+    --sidebar-background: 330 90% 97%;
+    --sidebar-foreground: 330 70% 25%;
+    --sidebar-primary: 330 85% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 330 50% 92%;
+    --sidebar-accent-foreground: 330 70% 25%;
+    --sidebar-border: 300 30% 90%;
+    --sidebar-ring: 330 85% 65%;
+
+    /* Menu colors */
+    --menu-background: 200 90% 97%;
+    --menu-foreground: 200 70% 25%;
+    --menu-border: 200 30% 90%;
+  }
+
+  .dark {
+    --background: 330 40% 10%;
+    --foreground: 300 30% 95%;
+
+    --card: 330 35% 12%;
+    --card-foreground: 300 30% 95%;
+
+    --popover: 330 35% 12%;
+    --popover-foreground: 300 30% 95%;
+
+    --primary: 330 85% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 85% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 330 30% 20%;
+    --muted-foreground: 300 20% 70%;
+
+    --accent: 280 75% 70%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 330 30% 20%;
+    --input: 330 30% 20%;
+    --ring: 330 85% 65%;
+
+    --sidebar-background: 330 40% 10%;
+    --sidebar-foreground: 300 30% 95%;
+    --sidebar-primary: 330 85% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 330 30% 20%;
+    --sidebar-accent-foreground: 300 30% 95%;
+    --sidebar-border: 330 30% 20%;
+    --sidebar-ring: 330 85% 65%;
+
+    --menu-background: 200 40% 10%;
+    --menu-foreground: 200 30% 95%;
+    --menu-border: 200 30% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
